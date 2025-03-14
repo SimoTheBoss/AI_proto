@@ -39,7 +39,7 @@ progress {
 
 /* Set the color of the progress bar fill */
 progress::-webkit-progress-value {
-  background-color: #3498db; /* Blue color for the fill */
+  background-color: #2bb52e; /* Blue color for the fill */
   border-radius: 10px;
 }
 
