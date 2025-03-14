@@ -1,7 +1,7 @@
 /* based on https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/v1.6.0/style.css */
 
 gradio-app {
-    background-color: #1e1e1e !important; /* Sostituisci con il colore che vuoi */
+    background-color: #996363 !important; /* Sostituisci con il colore che vuoi */
 }
 
 .loader-container {
