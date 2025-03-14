@@ -1,8 +1,7 @@
 /* based on https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/v1.6.0/style.css */
 
-body {
-    background-color: #969bd9; /* Sostituisci con il colore che vuoi */
-    color: #ffffff; /* Cambia il colore del testo se necessario */
+gradio-app {
+    background-color: #1e1e1e !important; /* Sostituisci con il colore che vuoi */
 }
 
 .loader-container {
