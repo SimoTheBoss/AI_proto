@@ -1,5 +1,10 @@
 /* based on https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/v1.6.0/style.css */
 
+body {
+    background-color: #969bd9; /* Sostituisci con il colore che vuoi */
+    color: #ffffff; /* Cambia il colore del testo se necessario */
+}
+
 .loader-container {
   display: flex; /* Use flex to align items horizontally */
   align-items: center; /* Center items vertically within the container */
