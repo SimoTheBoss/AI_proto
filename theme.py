@@ -25,7 +25,6 @@ theme = gr.themes.Soft(
     link_text_color_active_dark='*secondary_50',
     link_text_color_hover_dark='*secondary_50',
     link_text_color_visited_dark='*neutral_50',
-    code_background_fill='*primary_100',
     code_background_fill_dark='*secondary_50',
     block_background_fill='*primary_50',
     block_info_text_color='*neutral_50',
@@ -48,5 +47,5 @@ theme = gr.themes.Soft(
     button_secondary_text_color_hover_dark='*neutral_800'
 )
 
-with gr.Blocks(theme=theme) as demo:
-    ...
+with gr.Blocks(theme=gr.themes.Soft()) as demo:
+...
