@@ -47,5 +47,4 @@ theme = gr.themes.Soft(
     button_secondary_text_color_hover_dark='*neutral_800'
 )
 
-with gr.Blocks(theme=gr.themes.Soft()) as demo:
-...
+with gr.Blocks(theme = gr.themes.Soft()) as demo:
