@@ -26,6 +26,17 @@ from modules.util import is_json
 
 from theme import theme
 
+interface = gr.Interface(
+    fn=main_function,  
+    inputs=[...],
+    outputs=[...],
+    title="Fooocus",
+    description="Generazione di immagini AI",
+    allow_flagging="never",
+    live=True,
+    theme=theme  #Aggiunto il tema personalizzato
+)
+
 def get_task(*args):
     args = list(args)
     args.pop(0)
