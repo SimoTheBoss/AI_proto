@@ -1,8 +1,5 @@
-/* based on https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/v1.6.0/style.css */
 
-gradio-app {
-    background-color: #996363 !important; /* Sostituisci con il colore che vuoi */
-}
+/* based on https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/v1.6.0/style.css */
 
 .loader-container {
   display: flex; /* Use flex to align items horizontally */
@@ -43,13 +40,7 @@ progress {
 
 /* Set the color of the progress bar fill */
 progress::-webkit-progress-value {
-  background-color: #2bb52e; /* Blue color for the fill */
-  border-radius: 10px;
-}
-
-progress::-webkit-progress-bar {
-    background-color: #9bbda4; /* Cambia il colore della parte vuota */
-    border-radius: 10px;
+  background-color: #3498db; /* Blue color for the fill */
 }
 
 progress::-moz-progress-bar {
@@ -63,7 +54,7 @@ progress::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: black; /* Set text color */
+  color: white; /* Set text color */
   font-size: 14px; /* Set font size */
 }
 
@@ -204,7 +195,7 @@ div:has(> #positive_prompt) {
   display: block;
   width: 2px;
   height: 7px;
-  background-color: #969bd9;
+  background-color: white;
   margin-top: 2px;
 }
 
@@ -213,7 +204,7 @@ div:has(> #positive_prompt) {
   display: block;
   width: 2px;
   height: 2px;
-  background-color: #969bd9;
+  background-color: white;
 }
 
 .canvas-tooltip-content {
