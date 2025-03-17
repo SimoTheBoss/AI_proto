@@ -153,7 +153,7 @@ if isinstance(args_manager.args.preset, str):
 
 shared.gradio_root = gr.Blocks(
     title=title,
-    theme="gr.themes.Soft").queue()
+    theme=theme).queue()
 
 with shared.gradio_root:
     currentTask = gr.State(worker.AsyncTask(args=[]))
