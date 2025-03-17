@@ -35,7 +35,6 @@ theme = gr.themes.Soft(
     button_large_radius='*radius_xxl',
     button_small_radius='*radius_xxl',
     button_small_text_weight='600',
-    button_medium_radius='*radius_xxl',
     button_primary_background_fill_hover='*primary_600',
     button_primary_background_fill_hover_dark='*primary_900',
     button_primary_text_color='*primary_800',
