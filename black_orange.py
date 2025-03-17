@@ -18,6 +18,7 @@ theme = gr.themes.Soft(
     background_fill_secondary='*neutral_300',
     background_fill_secondary_dark='*neutral_500',
     border_color_accent_subdued='*secondary_700',
+    border_color_primary_dark='*primary_50'
     color_accent_soft='*primary_300',
     link_text_color='*neutral_50',
     link_text_color_dark='*secondary_50',
