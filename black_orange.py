@@ -44,3 +44,4 @@ theme = gr.themes.Soft(
     button_secondary_border_color_hover_dark='*neutral_900',
     button_secondary_text_color_hover_dark='*neutral_800'
 )
+__all__ = ["theme"]
