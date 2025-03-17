@@ -1,5 +1,3 @@
-import gradio as gr
-
 theme = gr.themes.Soft(
     primary_hue=gr.themes.Color(c100="#ffe7d6", c200="#ffdbc2", c300="#ffcfad", c400="#ffc499", c50="#fff3eb", c500="#FFB17A", c600="#ffac70", c700="#ffa05c", c800="#ff9447", c900="#ff9433", c950="#ff7c1f"),
     secondary_hue=gr.themes.Color(c100="#e0e7ff", c200="#c7d2fe", c300="#a5b4fc", c400="#818cf8", c50="rgba(255, 255, 255, 1)", c500="#6366f1", c600="#4f46e5", c700="#4338ca", c800="#3730a3", c900="#312e81", c950="#2b2c5e"),
