@@ -18,7 +18,7 @@ from gradio_client.serializing import ImgSerializable
 from PIL import Image as _Image  # using _ to minimize namespace pollution
 
 from gradio import processing_utils, utils, Error
-from gradio.components import Component as IOComponent
+from gradio.components.base import IOComponent, _Keywords, Block
 from gradio.deprecation import warn_style_method_deprecation
 from gradio.events import (
     Changeable,
