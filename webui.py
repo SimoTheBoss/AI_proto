@@ -158,8 +158,9 @@ shared.gradio_root = gr.Blocks(
 with shared.gradio_root:
     currentTask = gr.State(worker.AsyncTask(args=[]))
     inpaint_engine_state = gr.State('empty')
-    gr.Markdown("<h1 style='text-align: center; font-size: 48px;'>Benvenuto nella mia app Gradio!</h1>")
+   
     with gr.Row():
+         gr.Markdown("<h1 style='text-align: center; font-size: 48px;'>Benvenuto nella mia app Gradio!</h1>")
         with gr.Column(scale=2):
             with gr.Row():
                 progress_window = grh.Image(label='Preview', show_label=True, visible=False, height=768,
