@@ -1,6 +1,25 @@
 
 /* based on https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/v1.6.0/style.css */
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Impedisce lo scroll iniziale */
+}
+
+.gradio-container {
+    height: 100%;
+    overflow-y: auto; /* Permette lo scroll all'interno della gradio-container, ma non all'avvio */
+}
+
+h1 {
+    margin-top: 0;
+    padding-top: 20px; /* Puoi regolare questo valore in base alla spaziatura desiderata */
+    text-align: center;
+}
+
+
 .loader-container {
   display: flex; /* Use flex to align items horizontally */
   align-items: center; /* Center items vertically within the container */
