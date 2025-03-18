@@ -158,10 +158,11 @@ shared.gradio_root = gr.Blocks(
 with shared.gradio_root:
     currentTask = gr.State(worker.AsyncTask(args=[]))
     inpaint_engine_state = gr.State('empty')
-   
     with gr.Row():
-        with gr.Column(scale=12):  # Una colonna che occupa tutta la larghezza
-            title = gr.HTML(value="<h1 style='text-align:center;'>Benvenuto nella Mia App!</h1>", elem_classes=["title"])
+        # Titolo centrato
+        title = gr.HTML(value="<h1 style='text-align:center;'>Benvenuto nella Mia App!</h1>", elem_classes=["title"])
+    
+    with gr.Row():
         with gr.Column(scale=2):
             with gr.Row():
                 progress_window = grh.Image(label='Preview', show_label=True, visible=False, height=768,
