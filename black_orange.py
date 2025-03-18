@@ -6,7 +6,6 @@ theme = gr.themes.Soft(
     neutral_hue=gr.themes.Color(c100="#585c89", c200="#5f6595", c300="#585c89", c400="#50547c", c50="#5f6595", c500="#424668", c600="#404364", c700="#383b57", c800="#30324b", c900="#164e63", c950="#14455c"),
     font=[gr.themes.GoogleFont('Poppins'), 'sans-serif', 'system-ui', 'sans-serif'],
     font_mono=[gr.themes.GoogleFont('poppins-regular'), 'ui-monospace', 'Consolas', 'monospace'],
-    dark_mode=True,
 ).set(
     body_background_fill='*primary_800',
     body_background_fill_dark='*neutral_700',
