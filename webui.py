@@ -160,7 +160,8 @@ with shared.gradio_root:
     inpaint_engine_state = gr.State('empty')
    
     with gr.Row():
-         gr.Markdown("<h1 style='text-align: center; font-size: 48px;'>Benvenuto nella mia app Gradio!</h1>")
+        with gr.Column(scale=12):  # Una colonna che occupa tutta la larghezza
+            title = gr.HTML(value="<h1 style='text-align:center;'>Benvenuto nella Mia App!</h1>", elem_classes=["title"])
         with gr.Column(scale=2):
             with gr.Row():
                 progress_window = grh.Image(label='Preview', show_label=True, visible=False, height=768,
