@@ -163,7 +163,7 @@ with shared.gradio_root:
         title = gr.HTML(value="<h1 style='text-align:center;'>Benvenuto nella Mia App!</h1>", elem_classes=["title"])
     
     with gr.Row():
-        with gr.Column(scale=8):
+        with gr.Column(scale=2):
             with gr.Row():
                 progress_window = grh.Image(label='Preview', show_label=True, visible=False, height=768,
                                             elem_classes=['main_view'])
