@@ -1,25 +1,80 @@
 
 /* based on https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/v1.6.0/style.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Blu → Violetto */
-    color: white; /* Testo bianco per contrasto */
-}
 
 }
 
-.gradio-container {
-    height: 100%;
-    overflow-y: auto; /* Permette lo scroll all'interno della gradio-container, ma non all'avvio */
+html, body, gradio-app {
+    background:linear-gradient(135deg, 
+          #eec33a 0%, /* Primo colore (40%) */ 
+          #25a18e 50%, /* Secondo colore (20%, centrale) */ 
+          #14213d 100% /* Terzo colore (40%) */) 
+      !important;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Poppins', !important;
+    
 }
 
-h1 {
-    margin-top: 0;
-    padding-top: 20px; /* Puoi regolare questo valore in base alla spaziatura desiderata */
-    text-align: center;
+span.svelte-1gfkn6j {
+  color: white;
+  border-color: #e5e7eb3d;
+}
+
+
+button.svelte-kqij2n {
+  color: white;
+  
+}
+
+.block.svelte-90oupt {
+  background: rgba(255, 255, 255, 0.1);
+      border-color: #e5e7eb3d;
+     !important;
+}
+
+div.svelte-sfqy0y {
+  background: rgba(255, 255, 255, 0.01);
+    border-color: #e5e7eb3d;
+    display: flex;
+    flex-direction: inherit;
+    flex-wrap: wrap;
+    gap: var(--form-gap-width);
+    box-shadow: var(--block-shadow);
+    border: var(--block-border-width) solid #e5e7eb3d;
+    border-radius: var(--block-radius);
+    overflow-y: hidden;   
+    !important;
+}
+
+div.svelte-iyf88w {
+    border: var(--block-border-width) solid #e5e7eb3d;
+    background: rgba(0, 0, 0, 0);
+    border-radius: var(--block-radius);
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-gap-width);
+    overflow: hidden;
+    !important;
+}
+
+textarea.svelte-1f354aw.svelte-1f354aw {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+div.svelte-19hvt5v {
+      border: 1px solid #e5e7eb00;
+}
+
+label.svelte-1ojmf70.svelte-1ojmf70.svelte-1ojmf70 {
+  background: rgba(0, 0, 0, 0.0001);
+  !important;
 }
 
 
