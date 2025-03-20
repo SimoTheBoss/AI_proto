@@ -1,418 +1,274 @@
-/* --- Reset e Impostazioni di base (Modificate per un look moderno) --- */
+
+/* based on https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/v1.6.0/style.css */
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font più moderna */
-    background-color: #f0f0f0; /* Sfondo leggermente più chiaro */
-    color: #333; /* Testo più scuro per contrasto */
-    -webkit-font-smoothing: antialiased; /* Migliora la resa del testo */
-    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Blu → Violetto */
+    color: white; /* Testo bianco per contrasto */
+}
+
 }
 
 .gradio-container {
     height: 100%;
-    overflow-y: auto;
-    display: flex; /* Utilizzo di Flexbox per layout più flessibile */
-    flex-direction: column;
+    overflow-y: auto; /* Permette lo scroll all'interno della gradio-container, ma non all'avvio */
 }
 
 h1 {
     margin-top: 0;
-    padding: 20px 0;
+    padding-top: 20px; /* Puoi regolare questo valore in base alla spaziatura desiderata */
     text-align: center;
-    font-size: 2.2em; /* Titolo più grande */
-    font-weight: 600; /* Grassetto */
-    color: #2c3e50; /* Colore del titolo più elegante */
-    border-bottom: 1px solid #e0e0e0; /* Bordo sottile */
 }
 
-/* --- Loader e Barra di progresso (Modificati) --- */
+
 .loader-container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centrato */
-    white-space: nowrap;
-    margin-top: 20px; /* Spazio sopra il loader */
+  display: flex; /* Use flex to align items horizontally */
+  align-items: center; /* Center items vertically within the container */
+  white-space: nowrap; /* Prevent line breaks within the container */
 }
 
 .loader {
-    border: 8px solid #e0e0e0; /* Grigio chiaro */
-    border-top: 8px solid #4CAF50; /* Verde (Material Design) */
-    border-radius: 50%;
-    width: 40px; /* Più grande */
-    height: 40px;
-    animation: spin 2s linear infinite;
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
+/* Style the progress bar */
 progress {
-    appearance: none;
-    height: 10px; /* Più sottile */
-    border-radius: 5px;
-    background-color: #e0e0e0;
-    width: 100%;
-    vertical-align: middle !important;
-    margin: 0 10px; /* Spazio ai lati */
+  appearance: none; /* Remove default styling */
+  height: 20px; /* Set the height of the progress bar */
+  border-radius: 5px; /* Round the corners of the progress bar */
+  background-color: #f3f3f3; /* Light grey background */
+  width: 100%;
+  vertical-align: middle !important;
 }
 
+/* Style the progress bar container */
+.progress-container {
+  margin-left: 20px;
+  margin-right: 20px;
+  flex-grow: 1; /* Allow the progress container to take up remaining space */
+}
+
+/* Set the color of the progress bar fill */
 progress::-webkit-progress-value {
-    background-color: #4CAF50; /* Verde (Material Design) */
-    border-radius: 5px; /* Bordo arrotondato anche per la parte piena */
-    transition: width 0.3s ease; /* Transizione fluida */
+  background-color: #3498db; /* Blue color for the fill */
 }
 
 progress::-moz-progress-bar {
-    background-color: #4CAF50;
-    border-radius: 5px;
-    transition: width 0.3s ease;
+  background-color: #3498db; /* Blue color for the fill in Firefox */
 }
 
+/* Style the text on the progress bar */
 progress::after {
-    content: attr(value '%');
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 0.9em; /* Testo più piccolo */
-    font-weight: 500; /* Grassetto leggero */
+  content: attr(value '%'); /* Display the progress value followed by '%' */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Set text color */
+  font-size: 14px; /* Set font size */
 }
 
+/* Style other texts */
 .loader-container > span {
-    margin-left: 10px;
-    color: #555; /* Testo leggermente più scuro */
+  margin-left: 5px; /* Add spacing between the progress bar and the text */
 }
 
 .progress-bar > .generating {
-    display: none !important;
+  display: none !important;
 }
 
 .progress-bar{
   height: 30px !important;
-  display: flex; /* Per allineare elementi interni, se necessario */
-  align-items: center;
-  padding: 0;
-  margin: 10px 0;
 }
 
 .progress-bar span {
     text-align: right;
     width: 215px;
-    color: #666;
-    font-size: 0.9em;
 }
-
-/* --- Personalizzazione dei componenti Gradio (Modernizzati) --- */
 div:has(> #positive_prompt) {
     border: none;
-    padding: 0;
-    margin-bottom: 10px;
 }
 
 #positive_prompt {
-    padding: 10px;
-    background-color: white; /* Sfondo bianco */
-    border: 1px solid #d0d0d0; /* Bordo più chiaro */
-    border-radius: 5px; /* Bordo arrotondato */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Ombra sottile */
-    transition: box-shadow 0.2s ease;
-    font-size: 1em;
-    width: calc(100% - 22px);
+    padding: 1px;
+    background: var(--background-fill-primary);
 }
-
-#positive_prompt:focus {
-    outline: none;
-    border-color: #4CAF50; /* Bordo verde al focus */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombra più pronunciata al focus */
-}
-
 
 .type_row {
-    height: auto !important; /* Altezza automatica */
-    margin-bottom: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: stretch; /* Important for equal height items */
+  height: 84px !important;
 }
 
 .type_row_half {
-    height: auto !important;
-    margin-bottom: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: stretch;
-}
-
-
-.type_row > div, .type_row_half > div{
-  flex: 1;
-  min-width: 250px; /* Minimum width for each item */
-  display: flex; /* Use flexbox for internal alignment */
-  flex-direction: column;
+  height: 34px !important;
 }
 
 .refresh_button {
-    border: none !important;
-    background: none !important;
-    font-size: none !important;
-    box-shadow: none !important;
-    cursor: pointer; /* Cursore a puntatore */
-    transition: transform 0.2s ease; /* Transizione per feedback visivo */
-    padding: 5px;
-}
-
-.refresh_button:hover {
-    transform: scale(1.1); /* Leggero ingrandimento al passaggio del mouse */
+  border: none !important;
+  background: none !important;
+  font-size: none !important;
+  box-shadow: none !important;
 }
 
 .advanced_check_row {
-    width: 100% !important; /* Usa tutta la larghezza disponibile */
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
+  width: 330px !important;
 }
 
 .min_check {
-    min-width: min(1px, 100%) !important;
+  min-width: min(1px, 100%) !important;
 }
 
 .resizable_area {
-    resize: vertical;
-    overflow: auto !important;
-    border: 1px solid #d0d0d0;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 1em;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-    transition: box-shadow 0.2s ease;
-}
-
-.resizable_area:focus {
-  outline: none;
-  border-color: #4CAF50;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  resize: vertical;
+  overflow: auto !important;
 }
 
 .performance_selection label {
-    width: auto !important; /* Larghezza automatica per le label */
-    margin-right: 15px; /* Spazio a destra delle label */
-    display: inline-flex; /* Allineamento inline con l'input */
-    align-items: center;
-    gap: 5px;
+    width: 140px !important;
 }
-
-.performance_selection label span{
-  margin-left: 0;
-}
-
-.aspect_ratios {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
 
 .aspect_ratios label {
-    flex: 1 !important; /* Ogni label occupa la stessa larghezza */
-    min-width: 120px; /* Larghezza minima */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center; /* Centra il contenuto della label */
-    padding: 8px 12px;
-    border: 1px solid #d0d0d0;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    flex: calc(50% - 5px) !important;
 }
-
-.aspect_ratios label:hover {
-    background-color: #f8f8f8; /* Leggero cambio di colore al hover */
-    border-color: #4CAF50;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.aspect_ratios label.selected {
-    background-color: #4CAF50 !important; /* Verde quando selezionato */
-    color: white !important;
-    border-color: #4CAF50;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
 
 .aspect_ratios label span {
     white-space: nowrap !important;
-    margin-left: 5px;
 }
 
 .aspect_ratios label input {
-    margin-left: 0 !important;
-    margin-right: 5px;
-}
-
-.lora_enable {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    margin-left: -5px !important;
 }
 
 .lora_enable label {
-    height: auto;
-    display: flex;
-    align-items: center; /* Vertically center the checkbox and text */
-    gap: 8px; /* Space between checkbox and text */
-    cursor: pointer;
+  height: 100%;
 }
 
-
 .lora_enable label input {
-    margin: 0; /* Remove default margin */
+  margin: auto;
 }
 
 .lora_enable label span {
-    display: inline; /* Make the span visible */
-    font-size: 0.9em;
-    color: #555;
+  display: none;
 }
 
 @-moz-document url-prefix() {
-    .lora_weight input[type=number] {
-        width: 80px;
-    }
+  .lora_weight input[type=number] {
+    width: 80px;
+  }
 }
 
-#context-menu {
-    z-index: 9999;
-    position: absolute;
-    display: block;
-    padding: 10px 0;
-    border: 1px solid #4CAF50; /* Verde */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombra più moderna */
-    width: 220px; /* Larghezza aumentata */
-    background-color: white;
+#context-menu{
+    z-index:9999;
+    position:absolute;
+    display:block;
+    padding:0px 0;
+    border:2px solid #a55000;
+    border-radius:8px;
+    box-shadow:1px 1px 2px #CE6400;
+    width: 200px;
 }
 
-.context-menu-items {
+.context-menu-items{
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.context-menu-items a {
-    display: block;
-    padding: 12px 15px; /* Padding aumentato */
-    cursor: pointer;
-    color: #333;
-    transition: background-color 0.2s ease, color 0.2s ease; /* Transizioni per colore e sfondo */
-    font-size: 1em;
+.context-menu-items a{
+    display:block;
+    padding:5px;
+    cursor:pointer;
 }
 
-.context-menu-items a:hover {
-    background: #4CAF50; /* Verde al hover */
-    color: white; /* Testo bianco al hover */
+.context-menu-items a:hover{
+    background: #a55000;
 }
 
 .canvas-tooltip-info {
-    position: absolute;
-    top: 28px;
-    left: 2px;
-    cursor: help;
-    background-color: rgba(0, 0, 0, 0.5); /* Più trasparente */
-    width: 24px; /* Più grande */
-    height: 24px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 100;
-    transition: all 0.2s ease;
-}
+  position: absolute;
+  top: 28px;
+  left: 2px;
+  cursor: help;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-.canvas-tooltip-info:hover{
-  transform: scale(1.2);
-  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
 }
 
 .canvas-tooltip-info::after {
-    content: '';
-    display: block;
-    width: 3px; /* Più spessa */
-    height: 10px; /* Più lunga */
-    background-color: white;
-    margin-top: 2px;
-    border-radius: 1.5px;
+  content: '';
+  display: block;
+  width: 2px;
+  height: 7px;
+  background-color: white;
+  margin-top: 2px;
 }
 
 .canvas-tooltip-info::before {
-    content: '';
-    display: block;
-    width: 3px;
-    height: 3px;
-    background-color: white;
-    border-radius: 50%;
+  content: '';
+  display: block;
+  width: 2px;
+  height: 2px;
+  background-color: white;
 }
 
 .canvas-tooltip-content {
-    display: none;
-    background-color: white;
-    color: #333;
-    border: 1px solid #d0d0d0; /* Bordo più chiaro */
-    padding: 15px;
-    position: absolute;
-    top: 40px;
-    left: 10px;
-    width: 300px; /* Larghezza aumentata */
-    font-size: 1em;
-    opacity: 0;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Ombra più moderna */
-    z-index: 100;
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Transizioni aggiunte */
+  display: none;
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 15px;
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  width: 250px;
+  font-size: 16px;
+  opacity: 0;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  z-index: 100;
 }
 
 .canvas-tooltip:hover .canvas-tooltip-content {
-    display: block;
-    animation: fadeIn 0.3s;
-    opacity: 1;
-    transform: translateY(0); /* Inizia dalla posizione corretta */
+  display: block;
+  animation: fadeIn 0.5s;
+  opacity: 1;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px); /* Inizia leggermente più in alto */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 .styler {
-    overflow: inherit !important;
+  overflow:inherit !important;
 }
 
-.gradio-container {
-    overflow: visible;
+.gradio-container{
+  overflow: visible;
 }
 
-/* --- Visualizzatore di immagini a schermo intero (Modificato) --- */
-#lightboxModal {
+/* fullpage image viewer */
+
+#lightboxModal{
     display: none;
     position: fixed;
     z-index: 1001;
@@ -425,62 +281,46 @@ div:has(> #positive_prompt) {
     user-select: none;
     -webkit-user-select: none;
     flex-direction: column;
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra orizzontalmente */
 }
 
 .modalControls {
     display: flex;
     position: absolute;
-    top: 0; /* Controlli in alto */
-    left: 0;
-    right: 0;
+    right: 0px;
+    left: 0px;
     gap: 1em;
     padding: 1em;
-    background-color: rgba(0, 0, 0, 0.5); /* Sfondo semi-trasparente */
+    background-color:rgba(0,0,0,0);
     z-index: 1;
     transition: 0.2s ease background-color;
 }
-
 .modalControls:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Sfondo leggermente più scuro al hover */
+    background-color:rgba(0,0,0,0.9);
 }
-
 .modalClose {
     margin-left: auto;
 }
-
-.modalControls span {
+.modalControls span{
     color: white;
     text-shadow: 0px 0px 0.25em black;
-    font-size: 2em; /* Icone più grandi */
+    font-size: 35px;
     font-weight: bold;
     cursor: pointer;
     width: 1em;
-    height: 1em;
-    display: flex; /* Center the icon inside the span */
-    align-items: center;
-    justify-content: center;
-    line-height: 0; /* Adjust line height to vertically center */
 }
 
-.modalControls span:hover,
-.modalControls span:focus {
-    color: #ddd; /* Grigio chiaro al hover */
+.modalControls span:hover, .modalControls span:focus{
+    color: #999;
     text-decoration: none;
 }
 
 #lightboxModal > img {
     display: block;
     margin: auto;
-    max-height: 90%; /* Altezza massima */
-    max-width: 90%; /* Larghezza massima */
-    object-fit: contain;
-    border-radius: 8px; /* Bordi arrotondati per l'immagine */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Ombra per staccare l'immagine dallo sfondo */
+    width: auto;
 }
 
-#lightboxModal > img.modalImageFullscreen {
+#lightboxModal > img.modalImageFullscreen{
     object-fit: contain;
     height: 100%;
     width: 100%;
@@ -489,32 +329,29 @@ div:has(> #positive_prompt) {
 
 .modalPrev,
 .modalNext {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 1.5em; /* Frecce più grandi */
-    transition: 0.3s ease; /* Transizione più fluida */
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-    background-color: rgba(0, 0, 0, 0.3); /* Sfondo più trasparente */
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.modalNext {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 .modalPrev:hover,
 .modalNext:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Sfondo leggermente più scuro al hover */
-    transform: scale(1.1); /* Leggero aumento di dimensioni al hover */
-}
-
-
-.modalNext {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 #imageARPreview {
@@ -541,104 +378,64 @@ div:has(> #positive_prompt) {
     background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 8px; /* Bordi arrotondati */
+    border-radius: 5px;
     z-index: 100;
     transition: transform 0.1s ease, opacity 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 #stylePreviewOverlay.lower-half {
     transform: translate(-140px, -140px);
 }
 
-/* --- Scrollable box for style selections (Modificato) --- */
+/* scrollable box for style selections */
 .contain .tabs {
-    height: 100%;
+  height: 100%;
 }
 
 .contain .tabs .tabitem.style_selections_tab {
-    height: 100%;
+  height: 100%;
 }
 
 .contain .tabs .tabitem.style_selections_tab > div:first-child {
-    height: 100%;
+  height: 100%;
 }
 
 .contain .tabs .tabitem.style_selections_tab .style_selections {
-    min-height: 200px;
-    height: 100%;
+  min-height: 200px;
+  height: 100%;
 }
 
 .contain .tabs .tabitem.style_selections_tab .style_selections .wrap[data-testid="checkbox-group"] {
-    position: relative; /* Mantiene il posizionamento relativo */
-    overflow: auto;
-    padding-right: 2px;
-    max-height: 100%;
+  position: absolute; /* remove this to disable scrolling within the checkbox-group */
+  overflow: auto;
+  padding-right: 2px;
+  max-height: 100%;
 }
 
 .contain .tabs .tabitem.style_selections_tab .style_selections .wrap[data-testid="checkbox-group"] label {
-     flex: calc(33.33% - 10px) !important; /* 3 colonne */
-    margin-bottom: 10px; /* Spazio tra le label */
-    display: flex; /* Allineamento per checkbox e testo */
-    align-items: center;
-    gap: 8px;
-    padding: 8px;
-    border: 1px solid #d0d0d0;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-    min-width: 0;
-}
-
-.contain .tabs .tabitem.style_selections_tab .style_selections .wrap[data-testid="checkbox-group"] label:hover {
-    background-color: #f8f8f8;
-    border-color: #4CAF50;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.contain .tabs .tabitem.style_selections_tab .style_selections .wrap[data-testid="checkbox-group"] label input{
-  margin-left: 0;
-}
-
-.contain .tabs .tabitem.style_selections_tab .style_selections .wrap[data-testid="checkbox-group"] label.selected {
-    background-color: #4CAF50 !important;
-    color: white !important;
-    border-color: #4CAF50;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  /* max-width: calc(35% - 15px) !important; */ /* add this to enable 3 columns layout */
+  flex: calc(50% - 5px) !important;
 }
 
 .contain .tabs .tabitem.style_selections_tab .style_selections .wrap[data-testid="checkbox-group"] label span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 0.9em;
+  /* white-space:nowrap; */ /* add this to disable text wrapping (better choice for 3 columns layout) */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* --- Stili preview tooltip (Modificato) --- */
+/* styles preview tooltip */
 .preview-tooltip {
-    background-color: rgba(255, 255, 255, 0.95); /* Sfondo più chiaro e semi-trasparente */
-    font-family: monospace;
-    text-align: center;
-    border-radius: 8px; /* Bordi più arrotondati */
-    padding: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Ombra */
-    border: 1px solid #d0d0d0;
-    color: #333;
-    font-size: 0.9em;
-    display: none;
+  background-color: #fff8;
+  font-family: monospace;
+  text-align: center;
+  border-radius: 5px 5px 0px 0px;
+  display: none; /* remove this to enable tooltip in preview image */
 }
 
 #inpaint_canvas .canvas-tooltip-info {
-    top: 2px;
+  top: 2px;
 }
 
-#inpaint_brush_color input[type=color] {
-    background: none;
-    border: 1px solid #d0d0d0;
-    border-radius: 5px;
-    padding: 2px;
-    cursor: pointer;
+#inpaint_brush_color input[type=color]{
+  background: none;
 }
