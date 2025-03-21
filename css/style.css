@@ -88,13 +88,14 @@ label.svelte-1ojmf70.svelte-1ojmf70.svelte-1ojmf70 {
 	--checkbox-background-color-selected: #243149;
 	--checkbox-border-color: #243149;
 	--checkbox-border-color-selected: #243149;
-	--checkbox-label-background-fill: linear-gradient(to top, #ef4444, #2563eb);
-	--checkbox-label-background-fill-hover: linear-gradient(to top, #ef4444, #2563eb);
+	--checkbox-label-background-fill: rgb(0,0,0,0.1);
+	--checkbox-label-background-fill-hover: var(--checkbox-label-border-color);
 	--checkbox-label-text-color: #ffffff;
 	--checkbox-label-text-color-selected: #ffffff;
 	--checkbox-label-border-color: none;
 	--body-text-color-subdued: #ffffff;
 	--background-fill-primary: rgb(0 0 0 / 6%);
+	--background-fill-secondary: #5c68ae;
 	--body-text-color: #ffffff;
 	--input-placeholder-color: #ffffffcf;
 
@@ -121,6 +122,9 @@ Color: white;
 	border-width:  1px;
 }
 
+.wrap-inner.svelte-1xsj8nn showOptions {
+	background-color: black;
+}
 
 .loader-container {
   display: flex; /* Use flex to align items horizontally */
