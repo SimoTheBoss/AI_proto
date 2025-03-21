@@ -77,6 +77,50 @@ label.svelte-1ojmf70.svelte-1ojmf70.svelte-1ojmf70 {
   !important;
 }
 
+/* modifiche da 21.03.2025
+
+
+.gradio-container-3-41-2 {
+	color: #ffffff
+}
+
+:root {
+	--checkbox-background-color-selected: #243149;
+	--checkbox-border-color: #243149;
+	--checkbox-border-color-selected: #243149;
+	--checkbox-label-background-fill: linear-gradient(to top, #ef4444, #2563eb);
+	--checkbox-label-background-fill-hover: linear-gradient(to top, #ef4444, #2563eb);
+	--checkbox-label-text-color: #ffffff;
+	--checkbox-label-text-color-selected: #ffffff;
+	--checkbox-label-border-color: none;
+	--body-text-color-subdued: #ffffff;
+	--background-fill-primary: rgb(0 0 0 / 6%);
+	--body-text-color: #ffffff;
+	--input-placeholder-color: #ffffffcf;
+
+}
+
+.selected.svelte-kqij2n {
+border-color: #ffffff00;
+Background: rgba (0,0,0,0.1);
+Color: white;
+}
+		
+.contain .tabs .tabitem.style_selections_tab .style_selections .wrap[data-testid="checkbox-group"] {
+		
+	background:  rgba(0, 0, 0, 0.01);
+    position: absolute;
+	overflow:  auto;
+	padding-right: 7px;
+	max-height: 100%;
+	border-radius:  7px;
+	padding-top: 7px;
+	padding-left: 7px;
+	padding-bottom: 7px;
+	border-color:  #e5e7eb3d;
+	border-width:  1px;
+}
+
 
 .loader-container {
   display: flex; /* Use flex to align items horizontally */
