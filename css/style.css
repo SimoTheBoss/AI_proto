@@ -11,10 +11,10 @@ html, body {
 }
 
 html, body, gradio-app {
-    background:linear-gradient(135deg, 
-          #1d193d 0%, /* Primo colore (40%) */ 
+    background:linear-gradient(120deg, 
+          #1d193dd6 0%, /* Primo colore (40%) */ 
           ##39ad8 50%, /* Secondo colore (20%, centrale) */ 
-          #1d193d 100% /* Terzo colore (40%) */) 
+          #1d193dd6 100% /* Terzo colore (40%) */) 
       !important;
     background-attachment: fixed;
     color: white;
