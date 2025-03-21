@@ -1,7 +1,7 @@
 
 /* based on https://github.com/AUTOMATIC1111/stable-diffusion-webui/blob/v1.6.0/style.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 
 html, body {
     height: 100%;
@@ -13,12 +13,12 @@ html, body {
 html, body, gradio-app {
     background:linear-gradient(120deg, 
           #1d193dd6 0%, /* Primo colore (40%) */ 
-          ##39ad8 50%, /* Secondo colore (20%, centrale) */ 
+          #22897E 50%, /* Secondo colore (20%, centrale) */ 
           #1d193dd6 100% /* Terzo colore (40%) */) 
       !important;
     background-attachment: fixed;
     color: white;
-    font-family: 'Poppins', !important;
+    
     
 }
 
@@ -77,10 +77,7 @@ label.svelte-1ojmf70.svelte-1ojmf70.svelte-1ojmf70 {
   !important;
 }
 
-/* modifiche da 21.03.2025
-
-
-.gradio-container-3-41-2 {
+.gradio-container-3-41-2{
 	color: #ffffff
 }
 
@@ -94,37 +91,37 @@ label.svelte-1ojmf70.svelte-1ojmf70.svelte-1ojmf70 {
 	--checkbox-label-text-color-selected: #ffffff;
 	--checkbox-label-border-color: none;
 	--body-text-color-subdued: #ffffff;
-	--background-fill-primary: rgb(0 0 0 / 6%);
+	--background-fill-primary: #2aa89b;
 	--background-fill-secondary: #5c68ae;
 	--body-text-color: #ffffff;
 	--input-placeholder-color: #ffffffcf;
-
+  --input-background-fill: #00000024;
 }
 
-.selected.svelte-kqij2n {
+.selected.svelte-kqij2n{
 border-color: #ffffff00;
 Background: rgba (0,0,0,0.1);
 Color: white;
 }
 		
-.contain .tabs .tabitem.style_selections_tab .style_selections .wrap[data-testid="checkbox-group"] {
-		
-	background:  rgba(0, 0, 0, 0.01);
+.contain .tabs .tabitem.style_selections_tab .style_selections .wrap[data-testid="checkbox-group"]{
+	background: rgba(0, 0, 0, 0.01);
     position: absolute;
-	overflow:  auto;
+	overflow: auto;
 	padding-right: 7px;
 	max-height: 100%;
-	border-radius:  7px;
+	border-radius: 7px;
 	padding-top: 7px;
 	padding-left: 7px;
 	padding-bottom: 7px;
-	border-color:  #e5e7eb3d;
-	border-width:  1px;
+	border-color: #e5e7eb3d;
+	border-width: 1px;
 }
 
 .wrap-inner.svelte-1xsj8nn showOptions {
 	background-color: black;
 }
+
 
 .loader-container {
   display: flex; /* Use flex to align items horizontally */
