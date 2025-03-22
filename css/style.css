@@ -95,7 +95,8 @@ label.svelte-1ojmf70.svelte-1ojmf70.svelte-1ojmf70 {
 	--background-fill-secondary: #5c68ae;
 	--body-text-color: #ffffff;
 	--input-placeholder-color: #ffffffcf;
-  --input-background-fill: #00000024;
+ 	--input-background-fill: #00000024;
+	--block-label-text-color: #ffffff;
 }
 
 .selected.svelte-kqij2n{
@@ -122,6 +123,17 @@ Color: white;
 	background-color: black;
 }
 
+input[type=range].svelte-1cl284s{
+	accent-color: white;
+}
+
+input.svelte-1p9xokt.svelte-1p9xokt.svelte-1p9xokt {
+	background-color: #ffffff;
+}
+
+input.svelte-1ojmf70.svelte-1ojmf70.svelte-1ojmf70 {
+	background-color: white;
+}
 
 .loader-container {
   display: flex; /* Use flex to align items horizontally */
