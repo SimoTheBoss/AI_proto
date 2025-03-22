@@ -560,20 +560,20 @@ with gr.Row():
                 enhance_checkbox.change(lambda x: gr.update(visible=x), inputs=enhance_checkbox,
                                             outputs=enhance_input_panel, queue=False, show_progress=False, _js=switch_js)
     
-            with gr.Column(scale=1, visible=modules.config.default_advanced_checkbox) as advanced_column:
-                with gr.Tab(label='Settings'):
-                    if not args_manager.args.disable_preset_selection:
-                        preset_selection = gr.Dropdown(label='Preset',
+                with gr.Column(scale=1, visible=modules.config.default_advanced_checkbox) as advanced_column:
+                    with gr.Tab(label='Settings'):
+                        if not args_manager.args.disable_preset_selection:
+                            preset_selection = gr.Dropdown(label='Preset',
                                                        choices=modules.config.available_presets,
                                                        value=args_manager.args.preset if args_manager.args.preset else "initial",
                                                        interactive=True)
     
-                    performance_selection = gr.Radio(label='Performance',
+                        performance_selection = gr.Radio(label='Performance',
                                                      choices=flags.Performance.values(),
                                                      value=modules.config.default_performance,
                                                      elem_classes=['performance_selection'])
     
-                    with gr.Accordion(label='Aspect Ratios', open=False, elem_id='aspect_ratios_accordion') as aspect_ratios_accordion:
+                        with gr.Accordion(label='Aspect Ratios', open=False, elem_id='aspect_ratios_accordion') as aspect_ratios_accordion:
                         aspect_ratios_selection = gr.Radio(label='Aspect Ratios', show_label=False,
                                                            choices=modules.config.available_aspect_ratios_labels,
                                                            value=modules.config.default_aspect_ratio,
