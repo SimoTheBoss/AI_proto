@@ -158,10 +158,10 @@ with shared.gradio_root:
     currentTask = gr.State(worker.AsyncTask(args=[]))
     inpaint_engine_state = gr.State('empty')
 
-    with gr.Row():
+    with gr.Row(2):
         gr.Markdown("<h1 id='custom-title'>Benvenuto su Fooocus!</h1>", unsafe_allow_html=True)
     
-    with gr.Row():
+    with gr.Row(8):
         with gr.Column(scale=2):
             with gr.Row():
                 progress_window = grh.Image(label='Preview', show_label=True, visible=False, height=768,
