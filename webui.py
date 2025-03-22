@@ -165,13 +165,13 @@ with shared.gradio_root:
                     gr.Markdown("<h1 id='custom-title'>Benvenuto su Fooocus!</h1>", unsafe_allow_html=True)
                     
             with gr.Row():
-                progress_window = grh.Image(label='Preview', show_label=True, visible=False, height=768,
+                progress_window = grh.Image(label='Preview', show_label=True, visible=False, height=500,
                                             elem_classes=['main_view'])
                 progress_gallery = gr.Gallery(label='Finished Images', show_label=True, object_fit='contain',
-                                              height=768, visible=False, elem_classes=['main_view', 'image_gallery'])
+                                              height=500, visible=False, elem_classes=['main_view', 'image_gallery'])
             progress_html = gr.HTML(value=modules.html.make_progress_html(32, 'Progress 32%'), visible=False,
                                     elem_id='progress-bar', elem_classes='progress-bar')
-            gallery = gr.Gallery(label='Gallery', show_label=False, object_fit='contain', visible=True, height=768,
+            gallery = gr.Gallery(label='Gallery', show_label=False, object_fit='contain', visible=True, height=500,
                                  elem_classes=['resizable_area', 'main_view', 'final_gallery', 'image_gallery'],
                                  elem_id='final_gallery')
             with gr.Row():
