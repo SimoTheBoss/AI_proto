@@ -158,12 +158,13 @@ with shared.gradio_root:
     currentTask = gr.State(worker.AsyncTask(args=[]))
     inpaint_engine_state = gr.State('empty')
 
-    with gr.Row(2):
+   with gr.Row():
+    with gr.Column(scale=2):  # Il titolo prende più spazio
         gr.Markdown("<h1 id='custom-title'>Benvenuto su Fooocus!</h1>", unsafe_allow_html=True)
-    
-    with gr.Row(8):
-        with gr.Column(scale=2):
-            with gr.Row():
+
+with gr.Row():
+    with gr.Column(scale=8):  # Riduzione dello spazio per gli altri elementi
+        with gr.Row():
                 progress_window = grh.Image(label='Preview', show_label=True, visible=False, height=768,
                                             elem_classes=['main_view'])
                 progress_gallery = gr.Gallery(label='Finished Images', show_label=True, object_fit='contain',
