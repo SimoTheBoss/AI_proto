@@ -10,6 +10,13 @@ html, body {
 
 }
 
+#custom-title{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
 html, body, gradio-app {
     background:linear-gradient(120deg, 
           #1d193dd6 0%, /* Primo colore (40%) */ 
