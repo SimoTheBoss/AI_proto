@@ -346,7 +346,7 @@ with shared.gradio_root:
                                 describe_apply_styles = gr.Checkbox(label='Apply Styles', value=modules.config.default_describe_apply_prompts_checkbox)
                                 describe_btn = gr.Button(value='Describe this Image into Prompt')
                                 describe_image_size = gr.Textbox(label='Image Size and Recommended Size', elem_id='describe_image_size', visible=False)
-                                gr.HTML('<a href="https://github.com/lllyasviel/Fooocus/discussions/1363" target="_blank">\U0001F4D4 Documentation</a>')
+                                
 
                                 def trigger_show_image_properties(image):
                                     value = modules.util.get_image_size_info(image, modules.flags.sdxl_aspect_ratios)
@@ -359,8 +359,7 @@ with shared.gradio_root:
                         with gr.Row():
                             with gr.Column():
                                 enhance_input_image = grh.Image(label='Use with Enhance, skips image generation', source='upload', type='numpy')
-                                gr.HTML('<a href="https://github.com/lllyasviel/Fooocus/discussions/3281" target="_blank">\U0001F4D4 Documentation</a>')
-
+                               
                     with gr.Tab(label='Metadata', id='metadata_tab') as metadata_tab:
                         with gr.Column():
                             metadata_input_image = grh.Image(label='For images created by Fooocus', source='upload', type='pil')
@@ -403,7 +402,7 @@ with shared.gradio_root:
                                                                     inputs=enhance_uov_processing_order,
                                                                     outputs=enhance_uov_prompt_type,
                                                                     queue=False, show_progress=False)
-                                gr.HTML('<a href="https://github.com/lllyasviel/Fooocus/discussions/3281" target="_blank">\U0001F4D4 Documentation</a>')
+                               
                     enhance_ctrls = []
                     enhance_inpaint_mode_ctrls = []
                     enhance_inpaint_engine_ctrls = []
@@ -495,7 +494,7 @@ with shared.gradio_root:
                                                                                  '(default is 0, always processed before any mask invert)')
                                 enhance_mask_invert = gr.Checkbox(label='Invert Mask', value=False)
 
-                            gr.HTML('<a href="https://github.com/lllyasviel/Fooocus/discussions/3281" target="_blank">\U0001F4D4 Documentation</a>')
+                           
 
                         enhance_ctrls += [
                             enhance_enabled,
@@ -694,7 +693,7 @@ with shared.gradio_root:
                 sharpness = gr.Slider(label='Image Sharpness', minimum=0.0, maximum=30.0, step=0.001,
                                       value=modules.config.default_sample_sharpness,
                                       info='Higher value means image and texture are sharper.')
-                gr.HTML('<a href="https://github.com/lllyasviel/Fooocus/discussions/117" target="_blank">\U0001F4D4 Documentation</a>')
+
                 dev_mode = gr.Checkbox(label='Developer Debug Mode', value=modules.config.default_developer_debug_mode_checkbox, container=False)
 
                 with gr.Column(visible=modules.config.default_developer_debug_mode_checkbox) as dev_tools:
