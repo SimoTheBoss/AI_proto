@@ -158,7 +158,7 @@ with shared.gradio_root:
     currentTask = gr.State(worker.AsyncTask(args=[]))
     inpaint_engine_state = gr.State('empty')
 
-   with gr.Row():
+with gr.Row():
     with gr.Column(scale=2):  # Il titolo prende più spazio
         gr.Markdown("<h1 id='custom-title'>Benvenuto su Fooocus!</h1>", unsafe_allow_html=True)
 
