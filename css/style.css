@@ -19,9 +19,9 @@ html, body {
 
 html, body, gradio-app {
     background:linear-gradient(120deg, 
-          #1d193dd6 0%, /* Primo colore (40%) */ 
-          #22897E 50%, /* Secondo colore (20%, centrale) */ 
-          #1d193dd6 100% /* Terzo colore (40%) */) 
+          #1e2a78  10%, /* Primo colore (40%) */ 
+          #ff2e4c 100%) /* Secondo colore (20%, centrale) */ 
+           
       !important;
     background-attachment: fixed;
     color: white;
@@ -89,21 +89,22 @@ label.svelte-1ojmf70.svelte-1ojmf70.svelte-1ojmf70 {
 }
 
 :root {
-	--checkbox-background-color-selected: #243149;
-	--checkbox-border-color: #243149;
-	--checkbox-border-color-selected: #243149;
+	--checkbox-background-color-selected: #1e2a78;
+	--checkbox-border-color: #1e2a78;
+	--checkbox-border-color-selected: #1e2a78;
 	--checkbox-label-background-fill: rgb(0,0,0,0.1);
 	--checkbox-label-background-fill-hover: var(--checkbox-label-border-color);
 	--checkbox-label-text-color: #ffffff;
 	--checkbox-label-text-color-selected: #ffffff;
 	--checkbox-label-border-color: none;
 	--body-text-color-subdued: #ffffff;
-	--background-fill-primary: #2aa89b;
-	--background-fill-secondary: #5c68ae;
+	--background-fill-primary: #4730a5;
+	--background-fill-secondary: #fd2e4e;
 	--body-text-color: #ffffff;
 	--input-placeholder-color: #ffffffcf;
  	--input-background-fill: #00000024;
 	--block-label-text-color: #ffffff;
+  --input-border-color: #e5e7eb30
 }
 
 .selected.svelte-kqij2n{
