@@ -162,7 +162,7 @@ with shared.gradio_root:
         with gr.Column(scale=2):
             with gr.Row():
                 with gr.Column(scale=2):  # Il titolo prende più spazio
-                    gr.Markdown("<h1 id='custom-title'>Benvenuto su Fooocus!</h1>", unsafe_allow_html=True)
+                    gr.Markdown("<h1 id='custom-title'>Welcome on ElypsiaArt.ai</h1>", unsafe_allow_html=True)
                     
             with gr.Row():
                 progress_window = grh.Image(label='Preview', show_label=True, visible=False, height=500,
