@@ -11,7 +11,7 @@ html, body {
 }
 
 #custom-title{
-    font-size: 32px;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
     
@@ -77,6 +77,15 @@ textarea.svelte-1f354aw.svelte-1f354aw {
 
 div.svelte-19hvt5v {
       border: 1px solid #e5e7eb00;
+}
+
+.hide-container.svelte-90oupt{
+    border-style: solid;
+    overflow: visible;
+    min-width: min(0px, 100%);
+    border-width: var(--block-border-width);
+    background: rgba(0, 0, 0, 0.0001);
+    !important;
 }
 
 label.svelte-1ojmf70.svelte-1ojmf70.svelte-1ojmf70 {
