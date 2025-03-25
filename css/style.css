@@ -29,6 +29,12 @@ html, body, gradio-app {
     
 }
 
+div.svelte-15lo0d8 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
 span.svelte-1gfkn6j {
   color: white;
   border-color: #e5e7eb3d;
