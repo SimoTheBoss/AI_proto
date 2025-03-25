@@ -25,10 +25,6 @@ from modules.auth import auth_enabled, check_auth
 from modules.util import is_json
 from black_orange import theme
 
-css =   fixed-column{
-        position: fixed;
-        width: 325 px;  /* Imposta la larghezza della colonna */
-    }
 
 def get_task(*args):
     args = list(args)
@@ -565,7 +561,7 @@ with shared.gradio_root:
             enhance_checkbox.change(lambda x: gr.update(visible=x), inputs=enhance_checkbox,
                                         outputs=enhance_input_panel, queue=False, show_progress=False, _js=switch_js)
 
-        with gr.Column(scale=1, visible=modules.config.default_advanced_checkbox, elem_classes="fixed-column") as advanced_column:
+        with gr.Column(scale=1, visible=modules.config.default_advanced_checkbox) as advanced_column:
             with gr.Tab(label='Settings'):
                 if not args_manager.args.disable_preset_selection:
                     preset_selection = gr.Dropdown(label='Preset',
