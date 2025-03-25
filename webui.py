@@ -27,7 +27,7 @@ from black_orange import theme
 
 css = .fixed-column {
         position: fixed;
-        width: 325px;  /* Imposta la larghezza della colonna */
+        width: 325 px;  /* Imposta la larghezza della colonna */
     }
 
 def get_task(*args):
