@@ -25,7 +25,7 @@ from modules.auth import auth_enabled, check_auth
 from modules.util import is_json
 from black_orange import theme
 
-css =   fixed-column {
+css =   fixed-column{
         position: fixed;
         width: 325 px;  /* Imposta la larghezza della colonna */
     }
